@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @prospectu.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @prospectu.email %>
+</p>
+
+<p>
+  <b>Imag:</b>
+  <%= @prospectu.imag %>
+</p>
+
+<p>
+  <b>Phonehome:</b>
+  <%= @prospectu.phonehome %>
+</p>
+
+<p>
+  <b>Phonecelular:</b>
+  <%= @prospectu.phonecelular %>
+</p>
+
+
+<%= link_to 'Edit', edit_prospectu_path(@prospectu) %> |
+<%= link_to 'Back', prospectus_path %>
