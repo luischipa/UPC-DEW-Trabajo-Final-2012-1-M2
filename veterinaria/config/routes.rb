@@ -1,4 +1,6 @@
 Veterinaria::Application.routes.draw do
+  resources :histories
+
   resources :clients
 
   resources :prospectus

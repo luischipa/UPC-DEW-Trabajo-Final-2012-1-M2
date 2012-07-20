@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  entry: MyString
+  discharge: MyString
+  symptoms: MyText
+  diagnosis: MyText
+  treatment: MyText
+
+two:
+  entry: MyString
+  discharge: MyString
+  symptoms: MyText
+  diagnosis: MyText
+  treatment: MyText
