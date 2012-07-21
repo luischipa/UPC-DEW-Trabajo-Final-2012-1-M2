@@ -11,3 +11,86 @@
  *= require_self
  *= require_tree .
 */
+/* CSS Document */
+body{padding:0px; margin:0px; background:#eae8d9; color:#848484; font:10px/14px Tahoma, Geneva, sans-serif;}
+div, p, ul, h2, h3, h4, img{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+
+.clear {clear: both; margin: 0px; height:0}
+
+p a{font:10px/14px Tahoma, Geneva, sans-serif; color:#000000; text-decoration:underline;}
+p a:hover{ color:#000; text-decoration:none;}
+
+p a.link2{font:11px/14px Arial, Helvetica, sans-serif; color:#000000; text-decoration:underline;}
+p a.link2:hover{ color:#000; text-decoration:none;}
+
+.headline{font:12px/14px Arial, Helvetica, sans-serif; color:#c62201; font-weight:bold}
+.headline2{font:12px/14px Arial, Helvetica, sans-serif; color:#8bb911; font-weight:bold}
+
+#container{width:675px; margin:0 auto;}
+
+
+/* HEADER */
+
+#headerPan{width:675px; height:320px; position:relative; background:url(../assets/b_header.jpg) 0 0 no-repeat}
+
+#headerPan img#logo{position:absolute; top:17px; left:7px}
+#headerPan img#slogan{position:absolute; top:111px; left:38px}
+
+#headerPan ul.menu{position:absolute; top:28px; left:266px; width:405px; height:17px; }
+#headerPan ul.menu li{float:left; height:17px; margin-right:10px}
+#headerPan ul.menu li a{ height:17px;  display:block; text-indent:-20000px; }
+#headerPan ul.menu li a:hover{height:17px; }
+
+#headerPan ul.menu li.b01 a{ width:44px;  background:url(../assets/btn_1.gif) 0 0 no-repeat; }
+#headerPan ul.menu li.b01 a:hover{ width:44px;  background:url(../assets/btn_1_over.gif) 0 0 no-repeat;}
+
+#headerPan ul.menu li.b02 a{ width:51px;  background:url(../assets/btn_2.gif) 0 0 no-repeat; }
+#headerPan ul.menu li.b02 a:hover{ width:51px;  background:url(../assets/btn_2_over.gif) 0 0 no-repeat;}
+
+#headerPan ul.menu li.b03 a{ width:66px;  background:url(../assets/btn_3.gif) 0 0 no-repeat; }
+#headerPan ul.menu li.b03 a:hover{ width:66px;  background:url(../assets/btn_3_over.gif) 0 0 no-repeat;}
+
+#headerPan ul.menu li.b04 a{ width:73px;  background:url(../assets/btn_4.gif) 0 0 no-repeat; }
+#headerPan ul.menu li.b04 a:hover{ width:73px;  background:url(../assets/btn_4_over.gif) 0 0 no-repeat;}
+
+#headerPan ul.menu li.b05 {margin-right:0}
+#headerPan ul.menu li.b05 a{ width:64px;  background:url(../assets/btn_5.gif) 0 0 no-repeat; }
+#headerPan ul.menu li.b05 a:hover{ width:64px;  background:url(../assets/btn_5_over.gif) 0 0 no-repeat;}
+
+#headerPan ul.menu li.linem{width:2px; background:url(../assets/spacer_m.gif) 0 0 no-repeat}
+
+/* CONTENT */
+
+#contentPan{width:675px; position:relative; padding-top:26px; background:#f0efe4}
+
+#c1{width:203px; margin:0 29px 0 19px; float:left}
+#c2{width:207px; margin:0 25px 0 0; float:left}
+#c3{width:175px; margin:0 0 0 0; float:left}
+
+#welcome h2{height:45px; position:relative; background:url(../assets/h_welcome.gif) 0 0 no-repeat; margin-bottom:10px}
+#welcome img{margin-bottom:21px}
+#welcome p.headline{margin-bottom:12px}
+
+#services h2{height:45px; position:relative; background:url(../assets/h_services.gif) 0 0 no-repeat; margin-bottom:10px}
+#services p.headline2{margin-bottom:15px}
+
+#services ul{margin-left:1px}
+#services ul li{ background: url(../assets/icon_plus.gif) 0 0 no-repeat; padding:0 0 0 26px; margin-bottom:16px; min-height:18px}
+#services ul li a{font:10px/14px Tahoma, Geneva, sans-serif; color:#6c6c42; text-decoration:underline;}
+#services ul li a:hover{color:#000000; text-decoration:none}
+
+#news {padding-top:5px; margin-bottom:15px}
+#news h2{height:24px; position:relative; background:url(../assets/h_news.gif) 0 0 no-repeat; margin-bottom:10px}
+#news p{margin-bottom:10px}
+#news p.date{font:12px/14px Arial, Helvetica, sans-serif; color:#c62201; font-weight:bold; padding-left:22px; background:url(../assets/file.gif) 0 3px no-repeat; margin-bottom:5px}
+
+#quotes h2{height:24px; position:relative; background:url(../assets/h_quotes.gif) 0 0 no-repeat; margin-bottom:10px}
+
+/* FOOTER */
+
+#footerPan {width:675px; height:57px;}
+#footerPan p{padding: 14px 0 0 0; font:10px/16px Tahoma, Geneva, sans-serif; font-weight:normal; text-align:center; color:#807f7c;}
+#footerPan p span{ font:10px/16px Tahoma, Geneva, sans-serif; color:#807f7c;}
+#footerPan p a{ font:10px/16px Tahoma, Geneva, sans-serif; color:#807f7c; text-decoration:none; padding: 0 3px }
+#footerPan p a:hover{ font:10px/16px Tahoma, Geneva, sans-serif; text-decoration:underline;}
