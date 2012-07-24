@@ -3,13 +3,17 @@ Veterinaria::Application.routes.draw do
   
   resources :histories
 
-  resources :clients
+  resources :clients 
 
   resources :prospectus
 
   resources :patients
 
-  resources :doctors
+  resources :doctors do
+	member do
+			get "add_propectus"
+	end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

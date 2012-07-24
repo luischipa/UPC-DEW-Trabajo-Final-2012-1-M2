@@ -16,6 +16,6 @@
   <b>Telefono:</b>
   <%= @doctor.telefono %>
 </p>
-
+<%= link_to 'Add_Prospectus', add_prospectus_doctor_path(@doctor) %> |
 <%= link_to 'Editar', edit_doctor_path(@doctor) %> |
 <%= link_to 'Atras', doctors_path %>
