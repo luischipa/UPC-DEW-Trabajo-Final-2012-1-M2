@@ -6,9 +6,13 @@
 
 <table>
 <tr>
+<td><b>Codigo:</b></td>
+<td><%= @client.codigo %></td>
+<td rowspan="7"> <%= image_tag @client.avatar.url %></td>
+</tr>
+<tr>
 <td><b>Nombre:</b></td>
 <td><%= @client.name %></td>
-<td rowspan="6"> <%= image_tag @client.avatar.url %></td>
 </tr>
 <tr>
 <td><b>Email:</b></td>
