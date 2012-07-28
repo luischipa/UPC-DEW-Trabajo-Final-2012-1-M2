@@ -1,8 +1,12 @@
 class Client < ActiveRecord::Base
 has_attached_file :avatar
 
-validates :codigo, :presence => true
+validates :codigo, :presence => true #NO PERMITE DEJAR VACIO
 validates :name, :presence => true
+
+validates_uniqueness_of :codigo #NO PERMITE REGISTROS DUPLICADOS
+validates_numericality_of :codigo  #VALIDA QUE SEA NUMERO
+
 
 validates :email,   
             :presence => true,   
