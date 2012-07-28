@@ -1,4 +1,6 @@
 Veterinaria::Application.routes.draw do
+  resources :usuarios
+
   root :to => "patients#home"
   
   resources :histories
