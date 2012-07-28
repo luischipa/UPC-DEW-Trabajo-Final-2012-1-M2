@@ -1,5 +1,5 @@
 <h2>Bienvenido, <%= @doctor.name %> </h2>
-<%= simple_form_for(@doctor) do |f| %>
-	<%= f.association :prospectus, :as => "check_boxes" %> <br />
+<%= form_for(@doctor) do |f| %>
+	
 	<%= f.button :submit %>
 <% end %>

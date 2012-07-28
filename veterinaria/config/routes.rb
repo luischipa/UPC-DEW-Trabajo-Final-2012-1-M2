@@ -13,7 +13,7 @@ Veterinaria::Application.routes.draw do
 
   resources :doctors do
 	member do
-			get "add_propectus"
+			get "add_prospectus"
 	end
   end
 

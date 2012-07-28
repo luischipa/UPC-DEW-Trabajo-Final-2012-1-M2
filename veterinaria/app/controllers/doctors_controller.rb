@@ -2,6 +2,10 @@ class DoctorsController < ApplicationController
   # GET /doctors
   # GET /doctors.json
   
+  def add_prospectus
+	@doctors = Doctor.find(params[:id])
+  end
+  
   
   def index
     @doctors = Doctor.all

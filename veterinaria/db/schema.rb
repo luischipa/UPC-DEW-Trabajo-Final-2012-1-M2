@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(:version => 20120728144333) do
   end
 
   create_table "doctors", :force => true do |t|
-    t.string   "nombre"
-    t.string   "apellido"
+    t.string   "name"
+    t.string   "lastname"
     t.string   "email"
-    t.string   "telefono"
+    t.string   "phone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

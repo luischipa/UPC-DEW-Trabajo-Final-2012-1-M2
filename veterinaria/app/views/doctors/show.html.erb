@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
-<h1> Doctor </h1>
+<h1> Doctors </h1>
 <p>
-  <b>Nombre:</b>
-  <%= @doctor.nombre %>
+  <b>Name:</b>
+  <%= @doctor.name %>
 </p>
 <p>
-  <b>Apellido:</b>
-  <%= @doctor.apellido %>
+  <b>Last Name:</b>
+  <%= @doctor.lastname %>
 </p>
 <p>
   <b>Email:</b>
   <%= @doctor.email %>
 </p>
 <p>
-  <b>Telefono:</b>
-  <%= @doctor.telefono %>
+  <b>Phone:</b>
+  <%= @doctor.phone %>
 </p>
-
+<%= link_to 'add prospectus', add_prospectus_path(@doctor) %> |
 <%= link_to 'Editar', edit_doctor_path(@doctor) %> |
 <%= link_to 'Atras', doctors_path %>
