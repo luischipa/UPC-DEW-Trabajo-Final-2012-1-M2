@@ -4,6 +4,10 @@ class DoctorsController < ApplicationController
   
   def add_prospectus
 	@doctors = Doctor.find(params[:id])
+	 respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @doctor }
+	  end
   end
   
   
