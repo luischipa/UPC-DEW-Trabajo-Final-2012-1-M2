@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cofactura: MyString
+  fefactura: 2012-08-01
+  codigo: MyString
+  name: MyString
+
+two:
+  cofactura: MyString
+  fefactura: 2012-08-01
+  codigo: MyString
+  name: MyString
