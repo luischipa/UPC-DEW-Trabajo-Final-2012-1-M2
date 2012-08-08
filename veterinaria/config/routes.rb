@@ -1,4 +1,6 @@
 Veterinaria::Application.routes.draw do
+  resources :client_patients
+
   resources :detallefacturas
 
   resources :facturas
@@ -20,7 +22,14 @@ Veterinaria::Application.routes.draw do
 			get "add_prospectus"
 	end
   end
-
+  
+  resources :clients do
+	member do
+		get "add_patients"
+	end
+  end
+  
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

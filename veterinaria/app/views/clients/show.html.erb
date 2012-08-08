@@ -32,7 +32,22 @@
 </tr>
 </table>
 
+<table>
+	Mascota(s):
+	<% @client.patients.each do |patient| %>
+		
+		<tr>
+			<td><%= patient.name  %></td>
+		</tr>
+	
+	<% end %>
+</table>
+
 <br />
+<li><a href="http://localhost:3000/patients/new">Registrar paciente </a></li>
+
+<%= link_to 'Agregar paciente', add_patients_client_path(@client) %>
+
 <%= link_to 'Editar', edit_client_path(@client) %> |
 <%= link_to 'Atras', clients_path %>
 

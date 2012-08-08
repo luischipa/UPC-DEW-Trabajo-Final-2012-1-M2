@@ -1,4 +1,8 @@
 class Client < ActiveRecord::Base
+has_many :client_patients
+has_many :patients, :through => :client_patients
+
+
 has_attached_file :avatar
 
 validates :codigo, :presence => true #NO PERMITE DEJAR VACIO

@@ -1,6 +1,16 @@
 class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
+  def add_patients
+	@client = Client.find(params[:id])
+	respond_to do |format|
+	format.html # show.html.erb
+	format.json { render json: @client }
+	end
+  end
+  
+  
+  
   def index
     @clients = Client.all
 
