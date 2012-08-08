@@ -1,26 +1,24 @@
 <h1>Lista de Clientes</h1>
 
-<table>
-  <tr>
+<table WIDTH="675">
+  <tr border=1 bgcolor="#F5D0A9">
   <th>Codigo</th>
     <th>Nombre</th>
     <th>Email</th>
     <th>Direccion</th>
     <th>Telefono</th>
     <th>Celular</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    
   </tr>
 
 <% @clients.each do |client| %>
   <tr>
-   <td><%= client.codigo %></td>
-    <td><%= client.name %></td>
-    <td><%= client.email %></td>
-    <td><%= client.address %></td>
-    <td><%= client.phonehome %></td>
-    <td><%= client.phonecel %></td>
+   <td bgcolor="white"><%= client.codigo %></td>
+    <td bgcolor="white"><%= client.name %></td>
+    <td bgcolor="white"><%= client.email %></td>
+    <td bgcolor="white"><%= client.address %></td>
+    <td bgcolor="white"><%= client.phonehome %></td>
+    <td bgcolor="white"><%= client.phonecel %></td>
     <td><%= link_to 'Ver', client %></td>
     <td><%= link_to 'Editar', edit_client_path(client) %></td>
     <td><%= link_to 'Eliminar', client, confirm: 'Esta seguro que desea eliminar?', method: :delete %></td>

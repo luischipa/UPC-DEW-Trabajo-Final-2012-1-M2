@@ -1,43 +1,43 @@
 <p id="notice"><%= notice %></p>
 
 
-<h2>CLIENTE REGISTRADO<h2/>
+<h2>Cliente registrado</h2>
 
 
-<table>
+<table WIDTH="675">
 <tr>
-<td><b>Codigo:</b></td>
-<td><%= @client.codigo %></td>
-<td rowspan="7"> <%= image_tag @client.avatar.url %></td>
+<td border=1 bgcolor="#F2F2F2"><b>Codigo:</b></td>
+<td border=1 bgcolor="white"><%= @client.codigo %></td>
+<td border=1 bgcolor="white" align="center" rowspan="7"> <%= image_tag @client.avatar.url %></td>
 </tr>
 <tr>
-<td><b>Nombre:</b></td>
-<td><%= @client.name %></td>
+<td border=1 bgcolor="#F2F2F2"><b>Nombre:</b></td>
+<td border=1 bgcolor="white"><%= @client.name %></td>
 </tr>
 <tr>
-<td><b>Email:</b></td>
-<td><%= @client.email %></td>
+<td border=1 bgcolor="#F2F2F2"><b>Email:</b></td>
+<td border=1 bgcolor="white"><%= @client.email %></td>
 </tr>
 <tr>
-<td><b>Direccion:</b></td>
-<td><%= @client.address %></td>
+<td border=1 bgcolor="#F2F2F2"><b>Direccion:</b></td>
+<td border=1 bgcolor="white"><%= @client.address %></td>
 </tr>
 <tr>
-<td><b>Telefono:</b></td>
-<td><%= @client.phonehome %></td>
+<td border=1 bgcolor="#F2F2F2"><b>Telefono:</b></td>
+<td border=1 bgcolor="white"><%= @client.phonehome %></td>
 </tr>
 <tr>
-<td><b>Celular:</b></td>
-<td><%= @client.phonecel%></td>
+<td border=1 bgcolor="#F2F2F2"><b>Celular:</b></td>
+<td border=1 bgcolor="white"><%= @client.phonecel%></td>
 </tr>
 </table>
 
 <table>
-	Mascota(s):
+	<h3>Mascotas Registradas:</h3>
 	<% @client.patients.each do |patient| %>
 		
 		<tr>
-			<td><%= patient.name  %></td>
+			<td border=1 bgcolor="white" WIDTH="675"><%= patient.name  %></td>
 		</tr>
 	
 	<% end %>

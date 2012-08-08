@@ -1,7 +1,7 @@
 <h1>Lista de pacientes</h1>
 
-<table>
-  <tr>
+<table WIDTH="675">
+  <tr border=1 bgcolor="#F5D0A9">
     <th>Nombre</th>
     <th>Especie</th>
     <th>Raza</th>
@@ -14,11 +14,11 @@
 
 <% @patients.each do |patient| %>
   <tr>
-    <td><%= patient.name %></td>
-    <td><%= patient.species %></td>
-    <td><%= patient.race %></td>
-    <td><%= patient.birth %></td>
-    <td><%= patient.hair %></td>
+    <td bgcolor="white"><%= patient.name %></td>
+    <td bgcolor="white"><%= patient.species %></td>
+    <td bgcolor="white"><%= patient.race %></td>
+    <td bgcolor="white"><%= patient.birth %></td>
+    <td bgcolor="white"><%= patient.hair %></td>
     <td><%= link_to 'Show', patient %></td>
     <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
     <td><%= link_to 'Destroy', patient, confirm: 'Are you sure?', method: :delete %></td>
