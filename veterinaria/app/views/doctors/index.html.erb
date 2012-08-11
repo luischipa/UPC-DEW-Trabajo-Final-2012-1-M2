@@ -1,4 +1,10 @@
-<h1>List doctors</h1>
+
+<a  href="http://localhost:3000/mantenimientos">Home</a>
+
+<br/>
+
+
+<h1>Lista doctor</h1>
 
 <%= form_for @search do |f| %>   
  <p>   
@@ -8,18 +14,20 @@
 <p class="button"><%= f.submit "Buscar" %> </p>   
 <% end %>
 
+
+
 <table>
   <tr>
-    <th>Name</th>
+    <th>Nombre</th>
 	<th></th>
 	<th></th>
-    <th>Last Name</th>
+    <th>Apellido</th>
 	<th></th>
 	<th></th>
     <th>Email</th>
 	<th></th>
 	<th></th>
-	<th>Phobne</th>
+	<th>Telefono</th>
 	<th></th>
 	<th></th>
   </tr>
@@ -38,13 +46,14 @@
 	<td><%= doctor.phone %></td>
 	<td></td>
 	<td></td>
-    <td><%= link_to 'Show', doctor %></td>
-    <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
-    <td><%= link_to 'Destroy', doctor, confirm: 'Seguro que desea eliminar el registro?', method: :delete %></td>
+    <td><%= link_to 'Ver', doctor %></td>
+    <td><%= link_to 'Editar', edit_doctor_path(doctor) %></td>
+    <td><%= link_to 'Eliminar', doctor, confirm: 'Seguro que desea eliminar el registro?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Doctors', new_doctor_path %>
+<%= link_to 'Nuevo Doctor', new_doctor_path %>
+
