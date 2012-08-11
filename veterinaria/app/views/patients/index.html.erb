@@ -1,0 +1,38 @@
+<h1>Lista de pacientes</h1>
+<%= form_for @search do |f| %>   
+ <p>   
+<%= f.label :Buscar_por_nombre %>   
+<%= f.text_field :name_contains %>   
+</p>   
+<p class="button"><%= f.submit "Buscar" %> </p>   
+<% end %>
+
+<table WIDTH="675">
+  <tr border=1 bgcolor="#F5D0A9">
+    <th>Nombre</th>
+    <th>Especie</th>
+    <th>Raza</th>
+    <th>Fecha Nacimiento</th>
+    <th>Pelaje</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @patients.each do |patient| %>
+  <tr>
+    <td bgcolor="white"><%= patient.name %></td>
+    <td bgcolor="white"><%= patient.species %></td>
+    <td bgcolor="white"><%= patient.race %></td>
+    <td bgcolor="white"><%= patient.birth %></td>
+    <td bgcolor="white"><%= patient.hair %></td>
+    <td><%= link_to 'Show', patient %></td>
+    <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+    <td><%= link_to 'Destroy', patient, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Patient', new_patient_path %>

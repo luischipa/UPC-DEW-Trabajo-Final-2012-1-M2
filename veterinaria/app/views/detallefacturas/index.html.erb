@@ -1,0 +1,35 @@
+<h1>Listing detallefacturas</h1>
+
+<table>
+  <tr>
+    <th>Cofactura</th>
+    <th>Coproducto</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
+    <th>Importe</th>
+    <th>Subtotal</th>
+    <th>Total</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @detallefacturas.each do |detallefactura| %>
+  <tr>
+    <td><%= detallefactura.cofactura %></td>
+    <td><%= detallefactura.coproducto %></td>
+    <td><%= detallefactura.cantidad %></td>
+    <td><%= detallefactura.precio %></td>
+    <td><%= detallefactura.importe %></td>
+    <td><%= detallefactura.subtotal %></td>
+    <td><%= detallefactura.total %></td>
+    <td><%= link_to 'Show', detallefactura %></td>
+    <td><%= link_to 'Edit', edit_detallefactura_path(detallefactura) %></td>
+    <td><%= link_to 'Destroy', detallefactura, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Detallefactura', new_detallefactura_path %>

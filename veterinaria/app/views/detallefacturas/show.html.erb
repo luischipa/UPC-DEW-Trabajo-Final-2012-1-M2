@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cofactura:</b>
+  <%= @detallefactura.cofactura %>
+</p>
+
+<p>
+  <b>Coproducto:</b>
+  <%= @detallefactura.coproducto %>
+</p>
+
+<p>
+  <b>Cantidad:</b>
+  <%= @detallefactura.cantidad %>
+</p>
+
+<p>
+  <b>Precio:</b>
+  <%= @detallefactura.precio %>
+</p>
+
+<p>
+  <b>Importe:</b>
+  <%= @detallefactura.importe %>
+</p>
+
+<p>
+  <b>Subtotal:</b>
+  <%= @detallefactura.subtotal %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @detallefactura.total %>
+</p>
+
+
+<%= link_to 'Edit', edit_detallefactura_path(@detallefactura) %> |
+<%= link_to 'Back', detallefacturas_path %>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+
+<h2>Cliente registrado</h2>
+
+
+<table WIDTH="675">
+<tr>
+<td border=1 bgcolor="#F2F2F2"><b>Codigo:</b></td>
+<td border=1 bgcolor="white"><%= @client.codigo %></td>
+<td border=1 bgcolor="white" align="center" rowspan="7"> <%= image_tag @client.avatar.url %></td>
+</tr>
+<tr>
+<td border=1 bgcolor="#F2F2F2"><b>Nombre:</b></td>
+<td border=1 bgcolor="white"><%= @client.name %></td>
+</tr>
+<tr>
+<td border=1 bgcolor="#F2F2F2"><b>Email:</b></td>
+<td border=1 bgcolor="white"><%= @client.email %></td>
+</tr>
+<tr>
+<td border=1 bgcolor="#F2F2F2"><b>Direccion:</b></td>
+<td border=1 bgcolor="white"><%= @client.address %></td>
+</tr>
+<tr>
+<td border=1 bgcolor="#F2F2F2"><b>Telefono:</b></td>
+<td border=1 bgcolor="white"><%= @client.phonehome %></td>
+</tr>
+<tr>
+<td border=1 bgcolor="#F2F2F2"><b>Celular:</b></td>
+<td border=1 bgcolor="white"><%= @client.phonecel%></td>
+</tr>
+</table>
+
+<table>
+	<h3>Mascotas Registradas:</h3>
+	<% @client.patients.each do |patient| %>
+		
+		<tr>
+			<td border=1 bgcolor="white" WIDTH="675"><%= patient.name  %></td>
+		</tr>
+	
+	<% end %>
+</table>
+
+<br />
+<li><a href="http://localhost:3000/patients/new">Registrar mascota</a></li>
+<br />
+<%= link_to 'Agregar mascota', add_patients_client_path(@client) %>
+<br />
+<br />
+<%= link_to 'Editar', edit_client_path(@client) %> |
+<%= link_to 'Atras', clients_path %>
+

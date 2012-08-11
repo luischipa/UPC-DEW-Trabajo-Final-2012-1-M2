@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cofactura: MyString
+  coproducto: MyString
+  cantidad: 1
+  precio: 1
+  importe: 1
+  subtotal: 1
+  total: 1
+
+two:
+  cofactura: MyString
+  coproducto: MyString
+  cantidad: 1
+  precio: 1
+  importe: 1
+  subtotal: 1
+  total: 1

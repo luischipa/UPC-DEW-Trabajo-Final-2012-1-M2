@@ -1,0 +1,50 @@
+<h1>List doctors</h1>
+
+<%= form_for @search do |f| %>   
+ <p>   
+<%= f.label :Buscar_por_nombre %>   
+<%= f.text_field :name_contains %>   
+</p>   
+<p class="button"><%= f.submit "Buscar" %> </p>   
+<% end %>
+
+<table>
+  <tr>
+    <th>Name</th>
+	<th></th>
+	<th></th>
+    <th>Last Name</th>
+	<th></th>
+	<th></th>
+    <th>Email</th>
+	<th></th>
+	<th></th>
+	<th>Phobne</th>
+	<th></th>
+	<th></th>
+  </tr>
+
+<% @doctors.each do |doctor| %>
+  <tr>
+    <td><%= doctor.name %></td>
+	<td></td>
+	<td></td>
+	<td><%= doctor.lastname %></td>
+	<td></td>
+	<td></td>
+	<td><%= doctor.email %></td>
+	<td></td>
+	<td></td>
+	<td><%= doctor.phone %></td>
+	<td></td>
+	<td></td>
+    <td><%= link_to 'Show', doctor %></td>
+    <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+    <td><%= link_to 'Destroy', doctor, confirm: 'Seguro que desea eliminar el registro?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Doctors', new_doctor_path %>

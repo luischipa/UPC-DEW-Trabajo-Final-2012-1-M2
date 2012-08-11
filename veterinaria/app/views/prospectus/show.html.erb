@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @prospectu.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @prospectu.email %>
+</p>
+
+<p>
+  <b>Imagen:</b>
+  <%= @prospectu.imag %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @prospectu.phonehome %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%= @prospectu.phonecelular %>
+</p>
+
+<p>
+<%= image_tag @prospectu.avatar.url %>
+<p/>
+
+<%= link_to 'Editar', edit_prospectu_path(@prospectu) %> |
+<%= link_to 'Atras', prospectus_path %>
