@@ -9,8 +9,7 @@ class UsuariosController < ApplicationController
       format.json { render json: @usuarios }
     end
   end
-
-  # GET /usuarios/1
+   # GET /usuarios/1
   # GET /usuarios/1.json
   def show
     @usuario = Usuario.find(params[:id])
@@ -20,18 +19,28 @@ class UsuariosController < ApplicationController
       format.json { render json: @usuario }
     end
   end
+  
+  #-----------------------------------------
+	def new
+		@usuario = Usuario.new
+	end
 
+ 
+
+ 
+  
+  
   # GET /usuarios/new
   # GET /usuarios/new.json
   def new
-    @usuario = Usuario.new
+   @usuario = Usuario.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @usuario }
     end
   end
-
+#------------------------------------------------
   # GET /usuarios/1/edit
   def edit
     @usuario = Usuario.find(params[:id])

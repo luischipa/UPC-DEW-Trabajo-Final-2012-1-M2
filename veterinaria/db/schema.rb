@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120811052121) do
+=======
+ActiveRecord::Schema.define(:version => 20120811051424) do
+>>>>>>> ba49db3be22e8984ad3e9dc10a5986e289353403
 
   create_table "client_patients", :force => true do |t|
     t.integer  "client_id"
@@ -97,6 +101,15 @@ ActiveRecord::Schema.define(:version => 20120811052121) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_update_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "tipo"
   end
 
   create_table "usuarios", :force => true do |t|

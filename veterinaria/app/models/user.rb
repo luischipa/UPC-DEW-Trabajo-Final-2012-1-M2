@@ -1,4 +1,4 @@
-class Usuario < ActiveRecord::Base
+class User < ActiveRecord::Base
 attr_accessible :email, :password, :password_confirmation
   
   attr_accessor :password
@@ -24,4 +24,5 @@ attr_accessible :email, :password, :password_confirmation
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
   end
+
 end
