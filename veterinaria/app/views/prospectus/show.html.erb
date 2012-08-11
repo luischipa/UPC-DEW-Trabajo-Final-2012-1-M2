@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Codigo:</b>
+  <%= @prospectu.codigo %>
+</p>
+<p>
   <b>Nombre:</b>
   <%= @prospectu.name %>
 </p>
@@ -11,8 +15,8 @@
 </p>
 
 <p>
-  <b>Imagen:</b>
-  <%= @prospectu.imag %>
+  <b>Direccion:</b>
+  <%= @prospectu.address %>
 </p>
 
 <p>
@@ -22,12 +26,11 @@
 
 <p>
   <b>Celular:</b>
-  <%= @prospectu.phonecelular %>
+  <%= @prospectu.phonecel %>
 </p>
 
 <p>
 <%= image_tag @prospectu.avatar.url %>
 <p/>
-
-<%= link_to 'Editar', edit_prospectu_path(@prospectu) %> |
-<%= link_to 'Atras', prospectus_path %>
+<%= link_to 'Lista Prospestos', prospectus_path %> |
+<%= link_to 'Lista Clientes', clients_path %>

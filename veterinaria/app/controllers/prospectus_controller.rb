@@ -44,7 +44,7 @@ class ProspectusController < ApplicationController
 
     respond_to do |format|
       if @prospectu.save
-        format.html { redirect_to @prospectu, notice: 'Prospectu was successfully created.' }
+        format.html { redirect_to @prospectu, notice: 'Prospecto Creado Satisfactoriamente.' }
         format.json { render json: @prospectu, status: :created, location: @prospectu }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class ProspectusController < ApplicationController
 
     respond_to do |format|
       if @prospectu.update_attributes(params[:prospectu])
-        format.html { redirect_to @prospectu, notice: 'Prospectu was successfully updated.' }
+        format.html { redirect_to @prospectu, notice: 'Cliente Creado Satisfactoriamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

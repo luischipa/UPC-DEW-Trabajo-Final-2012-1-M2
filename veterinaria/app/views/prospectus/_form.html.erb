@@ -1,4 +1,3 @@
-
 <%= form_for(@prospectu,:html => { :multipart => true } ) do |f| %>
   <% if @prospectu.errors.any? %>
     <div id="error_explanation">
@@ -11,18 +10,21 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :Codigo %><br />
+    <%= f.text_field :codigo %>
+  </div>
   <div class="field">
     <%= f.label :Nombre %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :Email %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :imagen %><br />
-    <%= f.text_field :imag %>
+    <%= f.label :Direccion%><br />
+    <%= f.text_field :address %>
   </div>
   <div class="field">
     <%= f.label :Telefono %><br />
@@ -30,13 +32,22 @@
   </div>
   <div class="field">
     <%= f.label :Celular %><br />
-    <%= f.text_field :phonecelular %>
+    <%= f.text_field :phonecel %>
   </div>
   
     <%= f.label :Imagen %><br/>
   <%= f.file_field :avatar %>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Grabar"%>
   </div>
+  <% client = Client.new %>
+  <% client.codigo = @prospectu.codigo %>  
+  <% client.name = @prospectu.name %>
+  <% client.email = @prospectu.email %>
+  <% client.address = @prospectu.address %>				
+  <% client.phonehome = @prospectu.phonehome %>
+  <% client.phonecel = @prospectu.phonecel %>  
+  <% client.avatar = @prospectu.avatar %> 
+  <% client = client.save %>	  
 <% end %>

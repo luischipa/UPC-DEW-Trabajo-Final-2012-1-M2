@@ -1,10 +1,12 @@
 <h1>Lista de Prospectos</h1>
 
+
 <table WIDTH="675">
   <tr border=1 bgcolor="#F5D0A9">
-    <th>Nombre</th>
+    <th>Codigo</th>
+	<th>Nombre</th>
     <th>Email</th>
-    <th>Imagen</th>
+    <th>Direccion</th>
     <th>Telefono</th>
     <th>Celular</th>
     <th></th>
@@ -14,14 +16,15 @@
 
 <% @prospectus.each do |prospectu| %>
   <tr>
+    <td bgcolor="white"><%= prospectu.codigo %></td>
     <td bgcolor="white"><%= prospectu.name %></td>
     <td bgcolor="white"><%= prospectu.email %></td>
-    <td bgcolor="white"><%= prospectu.imag %></td>
+    <td bgcolor="white"><%= prospectu.address %></td>
     <td bgcolor="white"><%= prospectu.phonehome %></td>
-    <td bgcolor="white"><%= prospectu.phonecelular %></td>
-    <td><%= link_to 'Ver', prospectu %></td>
-    <td><%= link_to 'Editar', edit_prospectu_path(prospectu) %></td>
+    <td bgcolor="white"><%= prospectu.phonecel %></td>
+    <td><%= link_to 'Ver', prospectu %></td>    	
     <td><%= link_to 'Eliminar', prospectu, confirm: 'Esta seguro que desea eliminar?', method: :delete %></td>
+	<td><%= link_to 'Cambiar Cliente', edit_prospectu_path(prospectu) %></td>
   </tr>
 <% end %>
 </table>
