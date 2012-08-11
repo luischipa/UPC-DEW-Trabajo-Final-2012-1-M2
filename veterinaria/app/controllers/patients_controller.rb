@@ -1,6 +1,13 @@
 class PatientsController < ApplicationController
   # GET /patients
   # GET /patients.json
+  def add_histories
+	@patient = Patient.find(params[:id])
+	respond_to do |format|
+	format.html # show.html.erb
+	format.json { render json: @patient }
+	end
+  end
   
    
   def index

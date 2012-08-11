@@ -1,0 +1,7 @@
+<h2>Bienvenido, <%= @patient.name %> </h2>
+<%= simple_form_for(@patient) do |f| %>
+	<%= f.association :histories, :as => "check_boxes" %> <br />
+	<%= f.button :submit %>
+<% end %>
+
+
