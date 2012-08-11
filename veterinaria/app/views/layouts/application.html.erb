@@ -20,6 +20,9 @@
 		<img src="../../../assets/slogan.jpg" alt="" name="logo" width="304" height="179" id="slogan" />
 
 		<ul class="menu">
+		<li class="b01"><a href="http://localhost:3000" title="home page">home page</a></li>
+			<li class="linem"></li>
+			
 			<div id="user_nav">
 			  <% if current_user %>
 				Bienvenido : as <%= current_user.email %>.
@@ -28,7 +31,9 @@
 				<%= link_to "Sign up", sign_up_path %> or
 				<%= link_to "log in", log_in_path %>
 			  <% end %>
+			  
 			</div>
+			
 		</ul>
 	</div>
 
