@@ -4,7 +4,10 @@ class PatientsController < ApplicationController
   
    
   def index
-    @patients = Patient.all
+  @search = Patient.search(params[:search])   
+  @patients = @search.all  
+  
+    #@patients = Patient.all
 
     respond_to do |format|
       format.html # index.html.erb

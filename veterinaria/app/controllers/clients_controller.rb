@@ -12,7 +12,11 @@ class ClientsController < ApplicationController
   
   
   def index
-    @clients = Client.all
+  
+    @search = Client.search(params[:search])   
+    @clients = @search.all  
+  
+    #@clients = Client.all
 
     respond_to do |format|
       format.html # index.html.erb

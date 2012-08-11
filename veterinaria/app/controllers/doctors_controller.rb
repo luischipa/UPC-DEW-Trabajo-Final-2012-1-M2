@@ -2,6 +2,7 @@ class DoctorsController < ApplicationController
   # GET /doctors
   # GET /doctors.json
   
+  
   def add_prospectus
 	@doctors = Doctor.find(params[:id])
 	 respond_to do |format|
@@ -12,7 +13,11 @@ class DoctorsController < ApplicationController
   
   
   def index
-    @doctors = Doctor.all
+  @search = Doctor.search(params[:search])   
+  @doctors = @search.all  
+  
+  
+   # @doctors = Doctor.all
 
     respond_to do |format|
       format.html # index.html.erb
