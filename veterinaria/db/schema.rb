@@ -104,6 +104,9 @@ ActiveRecord::Schema.define(:version => 20120811080843) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_update_at"
+    t.string   "codigo"
+    t.string   "address"
+    t.string   "phonecel"
   end
 
   create_table "users", :force => true do |t|
