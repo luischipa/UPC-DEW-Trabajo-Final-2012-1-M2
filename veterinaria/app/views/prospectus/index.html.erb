@@ -1,5 +1,12 @@
 <h1>Lista de Prospectos</h1>
 
+<%= form_for @search do |f| %>   
+<p>   
+<%= f.label :Buscar_por_nombre %>   
+<%= f.text_field :name_contains %>   
+</p>   
+<p class="button"><%= f.submit "Buscar" %> </p>   
+<% end %>  
 
 <table WIDTH="675">
   <tr border=1 bgcolor="#F5D0A9">

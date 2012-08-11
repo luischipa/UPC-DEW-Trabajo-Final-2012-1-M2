@@ -2,7 +2,8 @@ class ProspectusController < ApplicationController
   # GET /prospectus
   # GET /prospectus.json
   def index
-    @prospectus = Prospectu.all
+	@search = Prospectu.search(params[:search])   
+	@prospectus = @search.all 
 
     respond_to do |format|
       format.html # index.html.erb
