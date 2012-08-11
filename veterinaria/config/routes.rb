@@ -1,4 +1,6 @@
 Veterinaria::Application.routes.draw do
+  resources :mantenimientos
+
   resources :patient_histories
 
 get "log_out" => "sessions#destroy", :as => "log_out"
