@@ -7,14 +7,14 @@ has_attached_file :avatar
 	validates_uniqueness_of :codigo #NO PERMITE REGISTROS DUPLICADOS
 
 	#NO PERMITE DEJAR VACIO	
-	validates :codigo, :name, :address, :phonecel, :presence => {:in => true,
+	validates :codigo, :name, :address, :phonecel, :phonehome, :email, :presence => {:in => true,
 		:message => " no puede estar vacio" }
 		
 	validates :codigo, :length => { :is => 8, 
 		:message => " :Maximo solo 8 Numeros" }
 		
 	#VALIDA QUE SEA NUMERO
-	validates :codigo, :phonecel, :numericality => { :only_integer => true,
+	validates :codigo, :phonecel, :phonehome, :numericality => { :only_integer => true,
 		:message => " :Solo Numeros" }
 
 	validates :email,   
