@@ -10,6 +10,7 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem 'sqlite3'
 gem 'paperclip'
 gem 'simple_form'
+gem 'meta_search'
 
 
 # Gems used only for assets and not required
