@@ -7,6 +7,7 @@ def create
   if user
     session[:user_id] = user.id
     redirect_to root_url, :notice => "Logged in!"
+	#redirect_to :action => 'users#new'
   else
     flash.now.alert = "Password incorrecto"
     render "new"
