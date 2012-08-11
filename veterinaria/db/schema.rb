@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120804042447) do
+ActiveRecord::Schema.define(:version => 20120811052121) do
 
   create_table "client_patients", :force => true do |t|
     t.integer  "client_id"
@@ -91,8 +91,12 @@ ActiveRecord::Schema.define(:version => 20120804042447) do
     t.string   "imag"
     t.string   "phonehome"
     t.string   "phonecelular"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_update_at"
   end
 
   create_table "usuarios", :force => true do |t|
